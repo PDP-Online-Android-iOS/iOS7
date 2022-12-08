@@ -16,6 +16,9 @@
 		64A7CB1E2941AB06008EEBC8 /* StarterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7CB1D2941AB06008EEBC8 /* StarterScreen.swift */; };
 		64A7CB202941ABA8008EEBC8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7CB1F2941ABA8008EEBC8 /* Utils.swift */; };
 		64A7CB222941B2E1008EEBC8 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7CB212941B2E1008EEBC8 /* SignUpScreen.swift */; };
+		64A7CB262941B518008EEBC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64A7CB282941B518008EEBC8 /* Localizable.strings */; };
+		64A7CB2A2941B67A008EEBC8 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A7CB292941B64F008EEBC8 /* Billabong.ttf */; };
+		64A7CB2D2941BD64008EEBC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7CB2C2941BD64008EEBC8 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,10 @@
 		64A7CB1D2941AB06008EEBC8 /* StarterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScreen.swift; sourceTree = "<group>"; };
 		64A7CB1F2941ABA8008EEBC8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		64A7CB212941B2E1008EEBC8 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		64A7CB272941B518008EEBC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		64A7CB292941B64F008EEBC8 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
+		64A7CB2B2941B6D3008EEBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		64A7CB2C2941BD64008EEBC8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +68,12 @@
 		64A7CB042941A39B008EEBC8 /* ios-myinsta */ = {
 			isa = PBXGroup;
 			children = (
+				64A7CB2B2941B6D3008EEBC8 /* Info.plist */,
 				64A7CB182941AAC8008EEBC8 /* screens */,
 				64A7CB1A2941AAD9008EEBC8 /* model */,
 				64A7CB192941AACD008EEBC8 /* utils */,
 				64A7CB052941A39B008EEBC8 /* ios_myinstaApp.swift */,
+				64A7CB232941B4DC008EEBC8 /* apputils */,
 				64A7CB092941A39C008EEBC8 /* Assets.xcassets */,
 				64A7CB0E2941A39C008EEBC8 /* Persistence.swift */,
 				64A7CB102941A39C008EEBC8 /* ios_myinsta.xcdatamodeld */,
@@ -95,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				64A7CB1F2941ABA8008EEBC8 /* Utils.swift */,
+				64A7CB2C2941BD64008EEBC8 /* Extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -104,6 +114,15 @@
 			children = (
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		64A7CB232941B4DC008EEBC8 /* apputils */ = {
+			isa = PBXGroup;
+			children = (
+				64A7CB292941B64F008EEBC8 /* Billabong.ttf */,
+				64A7CB282941B518008EEBC8 /* Localizable.strings */,
+			);
+			path = apputils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A7CB0D2941A39C008EEBC8 /* Preview Assets.xcassets in Resources */,
+				64A7CB262941B518008EEBC8 /* Localizable.strings in Resources */,
 				64A7CB0A2941A39C008EEBC8 /* Assets.xcassets in Resources */,
+				64A7CB2A2941B67A008EEBC8 /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +200,7 @@
 				64A7CB0F2941A39C008EEBC8 /* Persistence.swift in Sources */,
 				64A7CB1C2941AAEB008EEBC8 /* SignInScreen.swift in Sources */,
 				64A7CB222941B2E1008EEBC8 /* SignUpScreen.swift in Sources */,
+				64A7CB2D2941BD64008EEBC8 /* Extensions.swift in Sources */,
 				64A7CB062941A39B008EEBC8 /* ios_myinstaApp.swift in Sources */,
 				64A7CB122941A39C008EEBC8 /* ios_myinsta.xcdatamodeld in Sources */,
 				64A7CB1E2941AB06008EEBC8 /* StarterScreen.swift in Sources */,
@@ -187,6 +209,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		64A7CB282941B518008EEBC8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64A7CB272941B518008EEBC8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		64A7CB132941A39C008EEBC8 /* Debug */ = {
@@ -314,7 +347,7 @@
 				DEVELOPMENT_TEAM = 6K7DDF9TZ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Instagram;
+				INFOPLIST_FILE = "ios-myinsta/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,7 +377,7 @@
 				DEVELOPMENT_TEAM = 6K7DDF9TZ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Instagram;
+				INFOPLIST_FILE = "ios-myinsta/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

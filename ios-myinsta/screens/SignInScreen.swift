@@ -12,6 +12,8 @@ struct SignInScreen: View {
     @State var email = ""
     @State var password = ""
     
+    @State var isLoading = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -21,19 +23,19 @@ struct SignInScreen: View {
                     
                     Spacer()
                     
-                    Text("Instagram")
+                    Text("app_name")
                         .foregroundColor(.white)
-                        .font(.system(size: 35))
                         .padding()
+                        .font(Font.custom("Billabong", size: 45))
                     
-                    TextField("Email", text: $email)
+                    TextField("email", text: $email)
                         .frame(height: 50)
                         .padding(.leading, 10)
                         .background(Color.white.opacity(0.4))
                         .cornerRadius(8)
                         .padding(.top, 10)
                     
-                    SecureField("Password", text: $password)
+                    SecureField("password", text: $password)
                         .frame(height: 50)
                         .padding(.leading, 10)
                         .background(Color.white.opacity(0.4))
@@ -43,7 +45,7 @@ struct SignInScreen: View {
                     Button {
                         
                     } label: {
-                        Text("Sign In")
+                        Text("sign_in")
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
@@ -56,13 +58,13 @@ struct SignInScreen: View {
 
                     VStack {
                         HStack {
-                            Text("Don't have an account")
+                            Text("dont_have_an_account")
                                 .foregroundColor(.white)
                             
                             NavigationLink(destination: {
                                 SignUpScreen()
                             }, label: {
-                                Text("Sign Up")
+                                Text("sign_up")
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
                             })
@@ -70,6 +72,10 @@ struct SignInScreen: View {
                     }.frame(maxWidth: .infinity, maxHeight: 50)
                     
                 }.padding()
+                
+                if isLoading {
+                    ProgressView()
+                }
             }
             .edgesIgnoringSafeArea(.all)
         }
