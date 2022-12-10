@@ -9,10 +9,22 @@ import SwiftUI
 
 struct HomeFeedScreen: View {
     @Binding var tabSelection: Int
+    
+    @ObservedObject var viewModel = HomeFeedViewModel()
+    
     var body: some View {
         NavigationStack {
             ZStack {
+                if viewModel.isLoading {
+                    ProgressView()
+                }
                 
+                List {
+                    ForEach(viewModel.posts, id: \.self) { post in
+                        PostCell(post: post)
+                            .listRowInsets(EdgeInsets())
+                    }
+                }.listStyle(PlainListStyle())
             }
             .navigationTitle("app_name")
             .navigationBarTitleDisplayMode(.inline)
@@ -22,6 +34,11 @@ struct HomeFeedScreen: View {
                 Image(systemName: "camera")
                     .foregroundColor(Utils.color2)
             }))
+            .onAppear() {
+                viewModel.apiPostList {
+                    print(viewModel.posts.count)
+                }
+            }
         }
     }
 }

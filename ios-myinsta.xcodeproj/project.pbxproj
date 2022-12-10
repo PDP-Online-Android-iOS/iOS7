@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B118D59DD07F6B72BBAAF5F /* Pods_ios_myinsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D893D900B2B9F450F11093C /* Pods_ios_myinsta.framework */; };
+		640919DF29449291008EC6CD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640919DE29449291008EC6CD /* PostCell.swift */; };
+		640919E2294492C9008EC6CD /* HomeFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640919E1294492C9008EC6CD /* HomeFeedViewModel.swift */; };
+		640919E4294492E0008EC6CD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640919E3294492E0008EC6CD /* Post.swift */; };
 		644E8B532943039600B0451A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E8B522943039600B0451A /* HomeScreen.swift */; };
 		644E8B56294303C000B0451A /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E8B55294303C000B0451A /* SessionStore.swift */; };
 		644E8B59294303E600B0451A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E8B58294303E600B0451A /* User.swift */; };
@@ -29,9 +33,15 @@
 		64A7CB262941B518008EEBC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64A7CB282941B518008EEBC8 /* Localizable.strings */; };
 		64A7CB2A2941B67A008EEBC8 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A7CB292941B64F008EEBC8 /* Billabong.ttf */; };
 		64A7CB2D2941BD64008EEBC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7CB2C2941BD64008EEBC8 /* Extensions.swift */; };
+		64C566DC2944997C00B05A73 /* HomeLikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D893D900B2B9F450F11093C /* Pods_ios_myinsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_myinsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		573D421A26D28EB421C5FAAA /* Pods-ios-myinsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-myinsta.release.xcconfig"; path = "Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta.release.xcconfig"; sourceTree = "<group>"; };
+		640919DE29449291008EC6CD /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		640919E1294492C9008EC6CD /* HomeFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewModel.swift; sourceTree = "<group>"; };
+		640919E3294492E0008EC6CD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		644E8B522943039600B0451A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		644E8B55294303C000B0451A /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		644E8B58294303E600B0451A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -56,6 +66,8 @@
 		64A7CB292941B64F008EEBC8 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		64A7CB2B2941B6D3008EEBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64A7CB2C2941BD64008EEBC8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLikesViewModel.swift; sourceTree = "<group>"; };
+		7A174EBD20BD789B4556686E /* Pods-ios-myinsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-myinsta.debug.xcconfig"; path = "Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +75,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B118D59DD07F6B72BBAAF5F /* Pods_ios_myinsta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640919DD2944924C008EC6CD /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				640919DE29449291008EC6CD /* PostCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		640919E0294492AF008EC6CD /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				640919E1294492C9008EC6CD /* HomeFeedViewModel.swift */,
+				64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		644E8B54294303B500B0451A /* services */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +124,8 @@
 			children = (
 				64A7CB042941A39B008EEBC8 /* ios-myinsta */,
 				64A7CB032941A39B008EEBC8 /* Products */,
+				965064ACD6E15BC909B66E9F /* Pods */,
+				682FD60045486264D198E45C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,16 +140,18 @@
 		64A7CB042941A39B008EEBC8 /* ios-myinsta */ = {
 			isa = PBXGroup;
 			children = (
-				644E8B54294303B500B0451A /* services */,
-				64A7CB2B2941B6D3008EEBC8 /* Info.plist */,
+				640919E0294492AF008EC6CD /* viewmodel */,
 				64A7CB182941AAC8008EEBC8 /* screens */,
+				640919DD2944924C008EC6CD /* cell */,
 				64A7CB1A2941AAD9008EEBC8 /* model */,
+				644E8B54294303B500B0451A /* services */,
 				64A7CB192941AACD008EEBC8 /* utils */,
-				64A7CB052941A39B008EEBC8 /* ios_myinstaApp.swift */,
 				64A7CB232941B4DC008EEBC8 /* apputils */,
+				64A7CB052941A39B008EEBC8 /* ios_myinstaApp.swift */,
 				64A7CB092941A39C008EEBC8 /* Assets.xcassets */,
 				64A7CB0E2941A39C008EEBC8 /* Persistence.swift */,
 				64A7CB102941A39C008EEBC8 /* ios_myinsta.xcdatamodeld */,
+				64A7CB2B2941B6D3008EEBC8 /* Info.plist */,
 				64A7CB0B2941A39C008EEBC8 /* Preview Content */,
 			);
 			path = "ios-myinsta";
@@ -158,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				644E8B58294303E600B0451A /* User.swift */,
+				640919E3294492E0008EC6CD /* Post.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -171,6 +206,23 @@
 			path = apputils;
 			sourceTree = "<group>";
 		};
+		682FD60045486264D198E45C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D893D900B2B9F450F11093C /* Pods_ios_myinsta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		965064ACD6E15BC909B66E9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A174EBD20BD789B4556686E /* Pods-ios-myinsta.debug.xcconfig */,
+				573D421A26D28EB421C5FAAA /* Pods-ios-myinsta.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64A7CB152941A39C008EEBC8 /* Build configuration list for PBXNativeTarget "ios-myinsta" */;
 			buildPhases = (
+				32CF6A692AF2518947116706 /* [CP] Check Pods Manifest.lock */,
 				64A7CAFE2941A39B008EEBC8 /* Sources */,
 				64A7CAFF2941A39B008EEBC8 /* Frameworks */,
 				64A7CB002941A39B008EEBC8 /* Resources */,
+				946E551570488D3C1EC41171 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +292,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32CF6A692AF2518947116706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-myinsta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		946E551570488D3C1EC41171 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64A7CAFE2941A39B008EEBC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,16 +341,20 @@
 			files = (
 				64A7CB0F2941A39C008EEBC8 /* Persistence.swift in Sources */,
 				644E8B532943039600B0451A /* HomeScreen.swift in Sources */,
+				64C566DC2944997C00B05A73 /* HomeLikesViewModel.swift in Sources */,
 				64A7CB1C2941AAEB008EEBC8 /* SignInScreen.swift in Sources */,
 				64A7CB222941B2E1008EEBC8 /* SignUpScreen.swift in Sources */,
 				644E8B682943188000B0451A /* ImagePickerView.swift in Sources */,
 				644E8B5D2943080800B0451A /* HomeSearchScreen.swift in Sources */,
 				644E8B5F2943081800B0451A /* HomeUploadScreen.swift in Sources */,
+				640919E2294492C9008EC6CD /* HomeFeedViewModel.swift in Sources */,
 				64A7CB2D2941BD64008EEBC8 /* Extensions.swift in Sources */,
 				64A7CB062941A39B008EEBC8 /* ios_myinstaApp.swift in Sources */,
 				644E8B56294303C000B0451A /* SessionStore.swift in Sources */,
 				64A7CB122941A39C008EEBC8 /* ios_myinsta.xcdatamodeld in Sources */,
+				640919E4294492E0008EC6CD /* Post.swift in Sources */,
 				644E8B66294317B600B0451A /* Coordinator.swift in Sources */,
+				640919DF29449291008EC6CD /* PostCell.swift in Sources */,
 				644E8B5B294307FA00B0451A /* HomeFeedScreen.swift in Sources */,
 				64A7CB1E2941AB06008EEBC8 /* StarterScreen.swift in Sources */,
 				644E8B632943082A00B0451A /* HomeProfileScreen.swift in Sources */,
@@ -394,6 +494,7 @@
 		};
 		64A7CB162941A39C008EEBC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A174EBD20BD789B4556686E /* Pods-ios-myinsta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,6 +525,7 @@
 		};
 		64A7CB172941A39C008EEBC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 573D421A26D28EB421C5FAAA /* Pods-ios-myinsta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
