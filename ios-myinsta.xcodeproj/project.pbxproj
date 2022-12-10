@@ -34,6 +34,10 @@
 		64A7CB2A2941B67A008EEBC8 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A7CB292941B64F008EEBC8 /* Billabong.ttf */; };
 		64A7CB2D2941BD64008EEBC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7CB2C2941BD64008EEBC8 /* Extensions.swift */; };
 		64C566DC2944997C00B05A73 /* HomeLikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */; };
+		64C566DE29449F3200B05A73 /* HomeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566DD29449F3200B05A73 /* HomeSearchViewModel.swift */; };
+		64C566E02944A0D600B05A73 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566DF2944A0D600B05A73 /* UserCell.swift */; };
+		64C566E32944A53300B05A73 /* HomeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566E22944A53300B05A73 /* HomeProfileViewModel.swift */; };
+		64C566E52944AC7300B05A73 /* MyPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566E42944AC7300B05A73 /* MyPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +71,10 @@
 		64A7CB2B2941B6D3008EEBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64A7CB2C2941BD64008EEBC8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLikesViewModel.swift; sourceTree = "<group>"; };
+		64C566DD29449F3200B05A73 /* HomeSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewModel.swift; sourceTree = "<group>"; };
+		64C566DF2944A0D600B05A73 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		64C566E22944A53300B05A73 /* HomeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileViewModel.swift; sourceTree = "<group>"; };
+		64C566E42944AC7300B05A73 /* MyPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCell.swift; sourceTree = "<group>"; };
 		7A174EBD20BD789B4556686E /* Pods-ios-myinsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-myinsta.debug.xcconfig"; path = "Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				640919DE29449291008EC6CD /* PostCell.swift */,
+				64C566DF2944A0D600B05A73 /* UserCell.swift */,
+				64C566E42944AC7300B05A73 /* MyPostCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -95,6 +105,8 @@
 			children = (
 				640919E1294492C9008EC6CD /* HomeFeedViewModel.swift */,
 				64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */,
+				64C566DD29449F3200B05A73 /* HomeSearchViewModel.swift */,
+				64C566E22944A53300B05A73 /* HomeProfileViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -347,12 +359,14 @@
 				644E8B682943188000B0451A /* ImagePickerView.swift in Sources */,
 				644E8B5D2943080800B0451A /* HomeSearchScreen.swift in Sources */,
 				644E8B5F2943081800B0451A /* HomeUploadScreen.swift in Sources */,
+				64C566E02944A0D600B05A73 /* UserCell.swift in Sources */,
 				640919E2294492C9008EC6CD /* HomeFeedViewModel.swift in Sources */,
 				64A7CB2D2941BD64008EEBC8 /* Extensions.swift in Sources */,
 				64A7CB062941A39B008EEBC8 /* ios_myinstaApp.swift in Sources */,
 				644E8B56294303C000B0451A /* SessionStore.swift in Sources */,
 				64A7CB122941A39C008EEBC8 /* ios_myinsta.xcdatamodeld in Sources */,
 				640919E4294492E0008EC6CD /* Post.swift in Sources */,
+				64C566E52944AC7300B05A73 /* MyPostCell.swift in Sources */,
 				644E8B66294317B600B0451A /* Coordinator.swift in Sources */,
 				640919DF29449291008EC6CD /* PostCell.swift in Sources */,
 				644E8B5B294307FA00B0451A /* HomeFeedScreen.swift in Sources */,
@@ -360,6 +374,8 @@
 				644E8B632943082A00B0451A /* HomeProfileScreen.swift in Sources */,
 				64A7CB202941ABA8008EEBC8 /* Utils.swift in Sources */,
 				644E8B59294303E600B0451A /* User.swift in Sources */,
+				64C566E32944A53300B05A73 /* HomeProfileViewModel.swift in Sources */,
+				64C566DE29449F3200B05A73 /* HomeSearchViewModel.swift in Sources */,
 				644E8B612943082100B0451A /* HomeLikesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
