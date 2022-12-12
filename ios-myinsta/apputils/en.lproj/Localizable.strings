@@ -19,6 +19,10 @@
 "likes" = "Likes";
 "following" = "Following";
 "follow" = "Follow";
+"confirm" = "Confirm";
+"cancel" = "Cancel";
 "search" = "Search";
 "followers" = "Followers";
 "posts" = "Posts";
+"log_out" = "Logout";
+"do_you_want_to_log_out" = "Do you want to Logout?";

@@ -11,4 +11,6 @@ struct User: Hashable {
     var uid: String?
     var email: String?
     var displayName: String?
+    var password: String?
+    var imgUser: String?
 }

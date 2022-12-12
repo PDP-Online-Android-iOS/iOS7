@@ -9,10 +9,23 @@ import SwiftUI
 
 struct SignInScreen: View {
     
+    @ObservedObject var viewModel = SignInViewModel()
+    
     @State var email = ""
     @State var password = ""
     
-    @State var isLoading = false
+    func doSignIn() {
+        if email.isValidEmail() && password.isValidPassword() {
+            viewModel.apiSignIn(email: email, password: password, completion: { status in
+                if !status {
+                    print("Error from Firebase: Please check email or password")
+                }
+            })
+        } else {
+            print("Please check email or password")
+        }
+        
+    }
     
     var body: some View {
         NavigationStack {
@@ -43,7 +56,7 @@ struct SignInScreen: View {
                         .padding(.top, 10)
                     
                     Button {
-                        
+                        doSignIn()
                     } label: {
                         Text("sign_in")
                             .foregroundColor(.white)
@@ -73,7 +86,7 @@ struct SignInScreen: View {
                     
                 }.padding()
                 
-                if isLoading {
+                if self.viewModel.isLoading {
                     ProgressView()
                 }
             }

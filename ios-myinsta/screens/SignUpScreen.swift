@@ -8,15 +8,36 @@
 import SwiftUI
 
 struct SignUpScreen: View {
-    
+    @EnvironmentObject var session: SessionStore
     @Environment(\.presentationMode) var presentation
+    
+    @ObservedObject var viewModel = SignUpViewModel()
     
     @State var fullname = ""
     @State var email = ""
     @State var password = ""
     @State var cPassword = ""
     
-    @State var isLoading = false
+    func doSignUp() {
+        if password == cPassword {
+            if email.isValidEmail() && password.isValidPassword() {
+                viewModel.apiSignUp(email: email, password: password, completion: { status in
+                    if !status {
+                        print("Please check email or password")
+                    } else {
+                        var user = User(email: email, displayName: fullname, password: password, imgUser: "")
+                        user.uid = session.user?.uid
+                        presentation.wrappedValue.dismiss()
+                    }
+                })
+            } else {
+                print("Please check email or password")
+            }
+        } else {
+            print("Please check email or password")
+        }
+        
+    }
     
     var body: some View {
         NavigationStack {
@@ -61,7 +82,7 @@ struct SignUpScreen: View {
                         .padding(.top, 10)
                     
                     Button {
-                        presentation.wrappedValue.dismiss()
+                        doSignUp()
                     } label: {
                         Text("sign_up")
                             .foregroundColor(.white)
@@ -90,7 +111,7 @@ struct SignUpScreen: View {
                     
                 }.padding()
                 
-                if isLoading {
+                if self.viewModel.isLoading {
                     ProgressView()
                 }
             }

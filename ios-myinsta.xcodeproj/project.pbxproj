@@ -38,6 +38,9 @@
 		64C566E02944A0D600B05A73 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566DF2944A0D600B05A73 /* UserCell.swift */; };
 		64C566E32944A53300B05A73 /* HomeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566E22944A53300B05A73 /* HomeProfileViewModel.swift */; };
 		64C566E52944AC7300B05A73 /* MyPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C566E42944AC7300B05A73 /* MyPostCell.swift */; };
+		64F69AE02946F0F800C8AB6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64F69ADF2946F0F800C8AB6D /* GoogleService-Info.plist */; };
+		64F69AE22947009400C8AB6D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F69AE12947009400C8AB6D /* SignInViewModel.swift */; };
+		64F69AE42947031200C8AB6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F69AE32947031200C8AB6D /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		64C566DF2944A0D600B05A73 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		64C566E22944A53300B05A73 /* HomeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileViewModel.swift; sourceTree = "<group>"; };
 		64C566E42944AC7300B05A73 /* MyPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCell.swift; sourceTree = "<group>"; };
+		64F69ADF2946F0F800C8AB6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64F69AE12947009400C8AB6D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		64F69AE32947031200C8AB6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7A174EBD20BD789B4556686E /* Pods-ios-myinsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-myinsta.debug.xcconfig"; path = "Target Support Files/Pods-ios-myinsta/Pods-ios-myinsta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +113,8 @@
 				64C566DB2944997C00B05A73 /* HomeLikesViewModel.swift */,
 				64C566DD29449F3200B05A73 /* HomeSearchViewModel.swift */,
 				64C566E22944A53300B05A73 /* HomeProfileViewModel.swift */,
+				64F69AE12947009400C8AB6D /* SignInViewModel.swift */,
+				64F69AE32947031200C8AB6D /* SignUpViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				64A7CB0E2941A39C008EEBC8 /* Persistence.swift */,
 				64A7CB102941A39C008EEBC8 /* ios_myinsta.xcdatamodeld */,
 				64A7CB2B2941B6D3008EEBC8 /* Info.plist */,
+				64F69ADF2946F0F800C8AB6D /* GoogleService-Info.plist */,
 				64A7CB0B2941A39C008EEBC8 /* Preview Content */,
 			);
 			path = "ios-myinsta";
@@ -297,6 +306,7 @@
 			files = (
 				64A7CB0D2941A39C008EEBC8 /* Preview Assets.xcassets in Resources */,
 				64A7CB262941B518008EEBC8 /* Localizable.strings in Resources */,
+				64F69AE02946F0F800C8AB6D /* GoogleService-Info.plist in Resources */,
 				64A7CB0A2941A39C008EEBC8 /* Assets.xcassets in Resources */,
 				64A7CB2A2941B67A008EEBC8 /* Billabong.ttf in Resources */,
 			);
@@ -357,6 +367,7 @@
 				64A7CB1C2941AAEB008EEBC8 /* SignInScreen.swift in Sources */,
 				64A7CB222941B2E1008EEBC8 /* SignUpScreen.swift in Sources */,
 				644E8B682943188000B0451A /* ImagePickerView.swift in Sources */,
+				64F69AE42947031200C8AB6D /* SignUpViewModel.swift in Sources */,
 				644E8B5D2943080800B0451A /* HomeSearchScreen.swift in Sources */,
 				644E8B5F2943081800B0451A /* HomeUploadScreen.swift in Sources */,
 				64C566E02944A0D600B05A73 /* UserCell.swift in Sources */,
@@ -374,6 +385,7 @@
 				644E8B632943082A00B0451A /* HomeProfileScreen.swift in Sources */,
 				64A7CB202941ABA8008EEBC8 /* Utils.swift in Sources */,
 				644E8B59294303E600B0451A /* User.swift in Sources */,
+				64F69AE22947009400C8AB6D /* SignInViewModel.swift in Sources */,
 				64C566E32944A53300B05A73 /* HomeProfileViewModel.swift in Sources */,
 				64C566DE29449F3200B05A73 /* HomeSearchViewModel.swift in Sources */,
 				644E8B612943082100B0451A /* HomeLikesScreen.swift in Sources */,

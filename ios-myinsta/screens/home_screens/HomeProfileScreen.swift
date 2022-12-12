@@ -18,6 +18,7 @@ struct HomeProfileScreen: View {
     @State private var selectedImage: UIImage?
     @State private var isImagePickerDisplay = false
     @State private var isSheet = false
+    @State private var isAlert = false
     
     func postSize() -> CGFloat {
         if level == 1 {
@@ -174,11 +175,15 @@ struct HomeProfileScreen: View {
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button(action: {
-                
+                self.isAlert = true
             }, label: {
                 Image(systemName: "rectangle.portrait.and.arrow.right")
                     .foregroundColor(.black)
-            }))
+            }).alert(isPresented: $isAlert) {
+                return Alert(title: Text("log_out"), message: Text("do_you_want_to_log_out"), primaryButton: .destructive(Text("confirm"), action: {
+                    viewModel.apiSignOut()
+                }), secondaryButton: .cancel())
+            })
         }.onAppear() {
             viewModel.apiPostList {
                 print(viewModel.posts.count)

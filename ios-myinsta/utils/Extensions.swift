@@ -44,3 +44,54 @@ extension UIScreen {
     static let height = UIScreen.main.bounds.size.height
     static let size = UIScreen.main.bounds.size
 }
+
+extension String {
+    
+    func isValidPassword() -> Bool {
+        var hasNumber = false
+        var hasUpperCase = false
+        var hasLowerCase = false
+        var hasCharacter = false
+        
+        for i in self {
+            if i.isNumber && !hasNumber {
+                hasNumber = true
+                continue
+            }
+            if i.isUppercase && !hasUpperCase {
+                hasUpperCase = true
+                continue
+            }
+            if i.isLowercase && !hasLowerCase {
+                hasLowerCase = true
+                continue
+            }
+            
+            let first: ClosedRange<UInt8> = (33...47)
+            let second: ClosedRange<UInt8> = (58...64)
+            let third: ClosedRange<UInt8> = (91...96)
+            let forth: ClosedRange<UInt8> = (123...127)
+            
+            let isChar = first.contains(i.asciiValue!) || second.contains(i.asciiValue!) || third.contains(i.asciiValue!) || forth.contains(i.asciiValue!)
+            
+            if isChar && !hasCharacter {
+                hasCharacter = true
+                continue
+            }
+        }
+        
+        return hasNumber && hasUpperCase && hasLowerCase && hasCharacter
+    }
+    
+    func isValidEmail() -> Bool {
+        do {
+            let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+            let range = NSRange(location: 0, length: self.count)
+            let matches = detector.matches(in: self, options: .anchored, range: range)
+            guard matches.count == 1 else { return false }
+            return matches[0].url?.scheme == "mailto"
+        } catch {
+            return false
+        }
+    }
+}
