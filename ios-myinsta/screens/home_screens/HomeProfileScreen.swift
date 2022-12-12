@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct HomeProfileScreen: View {
+    
+    @EnvironmentObject var session: SessionStore
     
     @ObservedObject var viewModel = HomeProfileViewModel()
     
@@ -27,6 +30,13 @@ struct HomeProfileScreen: View {
         return UIScreen.width / CGFloat(level) - 15
     }
     
+    func uploadPhoto() {
+        let uid = session.user?.uid!
+        if selectedImage != nil {
+            viewModel.uploadProfileImage(uid: uid!, photo: selectedImage!)
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -37,14 +47,14 @@ struct HomeProfileScreen: View {
                 VStack(spacing: 0) {
                     ZStack {
                         VStack {
-                            if selectedImage == nil {
-                                Image("ic_person")
+                            if viewModel.user != nil && viewModel.user!.imgUser != "" {
+                                WebImage(url: URL(string: viewModel.user!.imgUser!))
                                     .resizable()
                                     .clipShape(Circle())
                                     .frame(width: 70, height: 70)
                                     .padding(.all, 2)
                             } else {
-                                Image(uiImage: selectedImage!)
+                                Image("ic_person")
                                     .resizable()
                                     .clipShape(Circle())
                                     .frame(width: 70, height: 70)
@@ -75,20 +85,20 @@ struct HomeProfileScreen: View {
                                         self.isImagePickerDisplay = true
                                     }
                                 }
-                                .sheet(isPresented: self.$isImagePickerDisplay) {
+                                .sheet(isPresented: self.$isImagePickerDisplay, onDismiss: uploadPhoto) {
                                     ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
                                 }
                             }
                         }.frame(width: 77, height: 77)
                     }
                     
-                    Text("Ogabek Matyakubov")
+                    Text(viewModel.user?.displayName ?? "name")
                         .foregroundColor(.black)
                         .font(.system(size: 17))
                         .fontWeight(.medium)
                         .padding(.top, 15)
                     
-                    Text("ogabekdev@gmail.com")
+                    Text(viewModel.user?.email ?? "email")
                         .foregroundColor(.gray)
                         .font(.system(size: 15))
                         .padding(.top, 3)
@@ -182,9 +192,12 @@ struct HomeProfileScreen: View {
             }).alert(isPresented: $isAlert) {
                 return Alert(title: Text("log_out"), message: Text("do_you_want_to_log_out"), primaryButton: .destructive(Text("confirm"), action: {
                     viewModel.apiSignOut()
+                    SessionStore().listen()
                 }), secondaryButton: .cancel())
             })
         }.onAppear() {
+            let uid = (session.user!.uid)
+            viewModel.apiLoadUser(uid: uid!)
             viewModel.apiPostList {
                 print(viewModel.posts.count)
             }

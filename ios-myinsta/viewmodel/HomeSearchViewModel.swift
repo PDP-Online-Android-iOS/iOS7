@@ -12,27 +12,13 @@ class HomeSearchViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var users: [User] = []
     
-    func apiUsersList(completion: @escaping () -> ()) {
+    func apiUsersList(uid: String, keyword: String) {
         isLoading = true
         users.removeAll()
         
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        self.users.append(User(uid: "1", email: "ogabekdev@gmail.com", displayName: "ogabekdev"))
-        
-        isLoading = false
-        completion()
+        DatabaseStore().loadUsers(keyword: keyword) { users in
+            self.users = users!
+            self.isLoading = false
+        }
     }
 }

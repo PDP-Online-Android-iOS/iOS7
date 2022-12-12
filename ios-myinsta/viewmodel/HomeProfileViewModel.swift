@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 class HomeProfileViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var posts: [Post] = []
+    
+    @Published var user: User?
     
     func apiPostList(completion: @escaping () -> ()) {
         isLoading = true
@@ -29,6 +32,29 @@ class HomeProfileViewModel: ObservableObject {
     
     func apiSignOut() {
         SessionStore().signOut()
+    }
+    
+    func apiLoadUser(uid: String) {
+        isLoading = true
+        DatabaseStore().loadUser(uid: uid, completion: { user in
+            self.isLoading = false
+            self.user = user ?? User()
+        })
+    }
+    
+    func uploadProfileImage(uid: String, photo: UIImage) {
+        self.isLoading = true
+        StorageStore().uploadUserImage(uid: uid, photo, completion: { downloadUrl in
+            self.isLoading = false
+            self.apiUpdateMyImage(uid: uid, userImg: downloadUrl)
+            self.apiLoadUser(uid: uid)
+        })
+    }
+    
+    func apiUpdateMyImage(uid: String, userImg: String?) {
+        self.isLoading = true
+        DatabaseStore().updateMyImage(uid: uid, userImg: userImg!)
+        self.isLoading = false
     }
     
 }

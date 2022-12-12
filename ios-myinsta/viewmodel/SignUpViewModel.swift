@@ -24,4 +24,8 @@ class SignUpViewModel: ObservableObject {
             }
         })
     }
+    
+    func apiSaveUser(user: User) {
+        DatabaseStore().saveUser(user: user)
+    }
 }
